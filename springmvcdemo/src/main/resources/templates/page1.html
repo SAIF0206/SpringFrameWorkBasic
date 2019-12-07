@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Page1</title>
+</head>
+<body>
+	<p th:text ="${m}">para 1</p>
+	<p th:text ="${session.usersession.name}">Para 2</p>
+	<p th:text ="${session.usersession.role}">Para 3</p>
+	<a href="scontroller2.html" th:href="@{/scontroller2}">View</a>
+</body>
+</html>
