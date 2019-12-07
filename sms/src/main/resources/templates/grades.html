@@ -7,7 +7,6 @@
 <style>
 * {
 	box-sizing: border-box;
-	
 }
 
 body {
@@ -20,7 +19,6 @@ header {
 	text-align: left;
 	font-size: 35px;
 	color: white;
-
 }
 
 nav {
@@ -83,50 +81,57 @@ th {
 	background-color: #4CAF50;
 	color: white;
 }
+
 .button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
 }
-a
-{
-font-size: 30px;
-padding-bottom:20px;
+
+a {
+	font-size: 30px;
+	padding-bottom: 20px;
 }
-li
-{
-background-position: 100% .4em;
-padding-right: .6em;
-margin: 1em 0;
+
+li {
+	background-position: 100% .4em;
+	padding-right: .6em;
+	margin: 1em 0;
 }
+
 </style>
 </head>
 <body>
 	<header>
-		<h2 th:tex>Name</h2>
+		<h2 th:text="${name.studentName}">Name</h2>
 		<div align="right">
-			<input type="button"  class = "button" value="Logout" />
+			<input type="button" class="button" value="Logout" />
 		</div>
 	</header>
 	<section>
 		<nav>
 			<ul>
 				<li><a href="/students/grades">Grades</a></li>
-				<li> </li>
+				<li></li>
 				<li><a href="/students/availableCourses">Available Courses</a></li>
-				<li>  </li>
+				<li></li>
 				<li><a href="/students/enrolledCourses">Enroll Courses</a></li>
 			</ul>
 		</nav>
+
+
 		
-		<h3 align="center">Copy of Grades</h3>
+
+		<h3 align="center">semester <span th:text="${name.semester}">Sem</span></h3>
+
+
 		<table align="center">
 			<tr>
 				<th>Course Id</th>
@@ -136,7 +141,7 @@ margin: 1em 0;
 			</tr>
 			<tr>
 				<td></td>
-				<td ></td>
+				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
@@ -165,7 +170,7 @@ margin: 1em 0;
 				<td></td>
 			</tr>
 		</table>
-		
+
 	</section>
 
 	<footer>

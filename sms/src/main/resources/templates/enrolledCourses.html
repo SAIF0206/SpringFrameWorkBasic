@@ -63,6 +63,11 @@ body {
 </head>
 <body>
 <h2>Enrolled Courses</h2>
+<script>
+		function myFunction() {
+			document.getElementById("click").innerHTML = "OKAY";
+		}
+	</script>
 
 
 <div class="row">
@@ -72,7 +77,8 @@ body {
     <div class="card">
      <h3>Mobile solution</h3>
       <p>SA 401</p>
-    <p><button>Cancel</button></p>
+    <p id = "click"><button onclick="myFunction()">Cancel</button></p>
+  
     </div>
   </div>
   
