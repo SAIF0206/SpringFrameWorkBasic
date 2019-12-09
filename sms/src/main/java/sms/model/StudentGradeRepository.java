@@ -9,3 +9,4 @@ public interface StudentGradeRepository extends JpaRepository <StudentGrade, Int
 	ArrayList<Student> findByStudent(Student student);
 
 }
+

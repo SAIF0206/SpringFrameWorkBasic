@@ -21,14 +21,16 @@ public class StudentService {
 		
 	}
 	
-//	@Autowired
-//	private StudentGradeRepository gradeRepo;
+	@Autowired
+	private StudentGradeRepository gradeRepo;
 	
 	@Autowired CourseRepository courseRepo;
 	public ArrayList<Course> listcourse(){
 		return (ArrayList<Course>) courseRepo.findAll();
 	}
 
-	
+//	public long queryStudentGrades(int courseID, String Course, int units, String grade) {
+//		String query = "SELECT sg.id , sg.course,sg.grade, c.courseName, c.courseUnit" + "From StudentGrade sg and "
+//	}
 
 }

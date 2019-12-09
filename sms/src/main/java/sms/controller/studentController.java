@@ -22,7 +22,7 @@ public class studentController {
 	
 	@GetMapping("/grades")
 	public String grades(Model model) {
-	Student student	=studentService.getStudentName(1);
+	Student student	=studentService.getStudentName(1); //SESSION ID	
 		model.addAttribute("name", student);
 		return "grades";
 
