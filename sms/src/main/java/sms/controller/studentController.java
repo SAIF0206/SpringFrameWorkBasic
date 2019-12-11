@@ -24,10 +24,11 @@ public class studentController {
 	
 	@GetMapping("/grades")
 	public String grades(Model model) {
-	Student student	=studentService.getStudentName(2);//SESSION ID
-	StudentGrade sg = studentService.getStudentName(student);
+	Student student	=studentService.getStudentName(1);//SESSION ID
+	ArrayList<StudentGrade> sg = studentService.getStudentName(student);
 	//System.out.println(sg.getStudent().getStudentName());
 		model.addAttribute("studentgrade", sg);
+		model.addAttribute("student", student);
 		return "grades";
 
 	}

@@ -23,7 +23,7 @@ public class StudentService {
 		
 	}
 	
-	public StudentGrade  getStudentName(Student student) {
+	public ArrayList<StudentGrade>  getStudentName(Student student) {
 		return studentGardeRepo.findByStudent(student);
 		
 	}

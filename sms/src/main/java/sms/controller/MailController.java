@@ -22,7 +22,9 @@ public class MailController {
 	@RequestMapping("/mail")
 	public String mail() throws MessagingException {
 		
-		mailSender.send("zhaomin19961031@gmail.com", "A test mail", "Body of the test mail");
+		//mailSender.send("zhaomin19961031@gmail.com", "Enrolment Request:<enrollmentid> submitted by <studentid>", "<DD/MM/YYYY, HH:MM> Enrolment Request:<enrollmentid> Submitted by:<studentid> Course applied:<coursecode>");
+		
+		mailSender.send("zhaomin19961031@gmail.com", "Enrolment Request submitted", "Please check system to approve/reject enrollment request.");
 		
 		return "MailConfirmation";
 	}

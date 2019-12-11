@@ -110,7 +110,7 @@ li {
 </head>
 <body>
 	<header>
-		<h2 th:text="${studentgrade.student.studentName}">Name</h2>
+		<h2 th:text="${student.studentName}">Name</h2>
 		<div align="right">
 			<input type="button" class="button" value="Logout" />
 		</div>
@@ -129,7 +129,7 @@ li {
 
 		
 
-		<h3 align="center">semester <span th:text="${studentgrade.semester}">Sem</span></h3>
+		<h3 align="center">semester <span th:text="${student.semester}">Sem</span></h3>
 
 
 		<table align="center">
@@ -141,30 +141,13 @@ li {
 			
 				
 			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+			<tr th:each = "grade:${studentgrade}">
+				<td th:text = "${grade.course.courseCode}"></td>
+				<td th:text = "${grade.course.courseName}"></td>
+				<td th:text = "${grade.course.courseUnit}"></td>
+				<td th:text = "${grade.grade}"></td>
 			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
+			
 		</table>
 
 	</section>
