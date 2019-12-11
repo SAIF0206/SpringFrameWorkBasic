@@ -66,7 +66,7 @@ body {
 	<h2>Available Courses</h2>
 	<script>
 		function myFunction() {
-			document.getElementById("${C.courseUnit}+${i++}").innerHTML = "Enrolled";
+			document.getElementById("${C.courseUnit}").innerHTML = "Enrolled";
 		}
 	</script>
 
@@ -80,8 +80,10 @@ body {
 					<span th:text="${C.courseCode}"></span></p>
 					<p><b>Course Unit</b>
 					<span th:text="${C.courseUnit}"></span></p>
-					<h3 id="${C.courseUnit}+{i++}">
-						<button onclick="myFunction()">Enroll</button>
+					<h3 id="${C.courseUnit}">
+					<a href ="/mail"> <input type = "button" class = "button" value = "Enroll" />
+					</a>
+						
 					</h3>
 				</div>
 			</div>

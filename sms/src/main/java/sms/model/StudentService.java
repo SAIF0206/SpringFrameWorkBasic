@@ -11,6 +11,8 @@ import org.springframework.stereotype.Service;
 public class StudentService {
 	@Autowired
 	private StudentRepository studentRepo;
+	@Autowired
+	private StudentGradeRepository studentGardeRepo;
 	
 	public List<Student> listStudent(){
 		return (List<Student>)studentRepo.findAll();
@@ -21,8 +23,12 @@ public class StudentService {
 		
 	}
 	
-	@Autowired
-	private StudentGradeRepository gradeRepo;
+	public StudentGrade  getStudentName(Student student) {
+		return studentGardeRepo.findByStudent(student);
+		
+	}
+	//@Autowired
+	//private StudentGradeRepository gradeRepo;
 	
 	@Autowired CourseRepository courseRepo;
 	public ArrayList<Course> listcourse(){

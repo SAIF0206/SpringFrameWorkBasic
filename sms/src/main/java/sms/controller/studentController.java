@@ -11,19 +11,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import sms.model.Course;
 import sms.model.Student;
-
+import sms.model.StudentGrade;
 import sms.model.StudentService;
 
 @Controller
 @RequestMapping("/students")
 public class studentController {
+	
+	
 	@Autowired
 	private StudentService studentService ;
 	
 	@GetMapping("/grades")
 	public String grades(Model model) {
-	Student student	=studentService.getStudentName(1); //SESSION ID	
-		model.addAttribute("name", student);
+	Student student	=studentService.getStudentName(2);//SESSION ID
+	StudentGrade sg = studentService.getStudentName(student);
+	//System.out.println(sg.getStudent().getStudentName());
+		model.addAttribute("studentgrade", sg);
 		return "grades";
 
 	}

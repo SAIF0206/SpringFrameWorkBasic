@@ -1,9 +1,11 @@
-package com.springtutorial.spring.controllers;
+package sms.controller;
 
 import javax.mail.MessagingException;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import sms.mail.MailSender;
 
 
 

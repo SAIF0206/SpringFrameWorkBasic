@@ -1,4 +1,4 @@
-package com.springtutorial.spring.mail;
+package com.springtutorial.spring.controllers;
 
 import javax.mail.MessagingException;
 
